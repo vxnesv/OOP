@@ -9,13 +9,13 @@ public class Jogador {
     String name;
     int[] score = new int[3];
 
-}
 
-    public int scoreTotal(){
+    public int scoreTotal() {
         int total = 0;
-        for(int i = 0; i < score.length; i++){
-           total += score[i];
+        for (int i = 0; i < score.length; i++) {
+            total += score[i];
 
         }
         return total;
+    }
 }

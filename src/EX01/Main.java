@@ -9,15 +9,15 @@ public class Main {
 
         //entrada de dados
         System.out.println("Nome:");
-        jogador.nome = sc.nextLine();
+        jogador.name = sc.nextLine();
         for(int i = 0; i < jogador.score.length; i++){
             System.out.print("Score" + (i+1) + ": ");
             jogador.score[i] = sc.nextInt();
         }
         //saida de dados
         System.out.println();
-        System.out.prinln("Nome: " + jogador.nome);
-        System.out.prinln("Score total: " + jogador.scoreTotal());
+        System.out.println("Nome: " + jogador.name);
+        System.out.println("Score total: " + jogador.scoreTotal());
 
     }
 
