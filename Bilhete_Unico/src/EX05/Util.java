@@ -43,4 +43,23 @@ public class Util {
         index++;
     }
 
+    public void consultarSaldo(){
+        int posicao = pesquisar();
+        if (posicao == -1){
+            showMessageDialog(null, "CPF não encontrado");
+
+        }
+    }
+
+    public int pesquisar(){
+        int posicao = -1;
+        long cpf = parseLong(showInputDialog("CPF para pesquisa"));
+        for(int i = 0; i < index; i++){
+            if(bilhete[i].usuario.cpf == cpf){
+                return i;
+            }
+        }
+        return -1;
+    }
+
 }
