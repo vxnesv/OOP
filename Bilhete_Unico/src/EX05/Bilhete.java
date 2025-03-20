@@ -22,6 +22,11 @@ public class Bilhete {
 
     //método para carregar o bilhete
 
+    public void carregar(double valor) {
+        saldo += valor;
+    }
+
+
     //método para consultar o saldo do bilhete
     public double consultarSaldo(){
 
