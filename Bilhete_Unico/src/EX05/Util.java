@@ -1,6 +1,7 @@
 import static javax.swing.JOptionPane.*;
 import static java.lang.Integer.parseInt;
 import static java.lang.Long.parseLong;
+import static java.lang.Double.parseDouble;
 
 public class Util {
 
@@ -29,6 +30,19 @@ public class Util {
                     case 1:
                         emitirBilhete();
                         break;
+
+                    case 2:
+                        carregarBilhete();
+                        break;
+
+                    case 3:
+                        consultarSaldo();
+                        break;
+
+                    case 4:
+                        passarNaCatraca();
+                        break;
+
                 }
             }
         }
@@ -51,6 +65,26 @@ public class Util {
         }
     }
 
+    public void carregarBilhete(){
+        int posicao = pesquisar();
+        double valor;
+
+        if(posicao != -1) {
+            valor = parseDouble(showInputDialog("Valor a ser carregado"));
+            showMessageDialog(null,[posicao].carregar(valor));
+
+
+        }
+    }
+
+    public void passarNaCatraca(){
+        int posicao = pesquisar();
+        if (posicao != -1){
+            showMessageDialog(null,[posicao].passarNaCatraca());
+        }
+
+    }
+
     public int pesquisar(){
         int posicao = -1;
         long cpf = parseLong(showInputDialog("CPF para pesquisa"));
@@ -61,5 +95,7 @@ public class Util {
         }
         return -1;
     }
+
+
 
 }
