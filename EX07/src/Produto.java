@@ -5,7 +5,6 @@ public class Produto {
     private Fornecedor fornecedor;
 
 
-
     public Produto(String nome, double valor, int qtdEstoque, Fornecedor fornecedor) {
         this.nome = nome;
         this.valor = valor;
@@ -14,7 +13,6 @@ public class Produto {
 
 
     }
-
 
 
     public String getNome() {
