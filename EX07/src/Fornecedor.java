@@ -5,11 +5,21 @@ public class Fornecedor {
     public Fornecedor(String nome, long cnpj) {
         this.nome = nome;
         this.cnpj = cnpj;
-
     }
 
-}
+    public String getNome() {
+        return nome;
+    }
 
-public List<produto> getProdutos() {
-    return produtos;
+    public void setNome(String nome) {
+        this.nome = nome;
+    }
+
+    public long getCnpj() {
+        return cnpj;
+    }
+
+    public void setCnpj(long cnpj) {
+        this.cnpj = cnpj;
+    }
 }
